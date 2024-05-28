@@ -1,0 +1,19 @@
+<form [formGroup] = 'userForm' (ngSubmit) = 'onSubmit()'>
+    <p>Nombre:</p>
+    <input type = 'text' formControlName = 'firstName'>
+    <p>Primer Apellido:</p>
+    <input type = 'text' formControlName = 'lastName'>
+    <p>Nombre de usuario:</p>
+    <input type = 'text' formControlName = 'userName'>
+    <p>Nacionalidad:</p>
+    <input type = 'text' formControlName = 'nationality'>
+    <p>Ciudad:</p>
+    <input type = 'text' formControlName = 'city'>
+    <p>País:</p>
+    <input type = 'text' formControlName = 'country'>
+    <p>Profesión:</p>
+    <input type = 'text' formControlName = 'job'>
+
+    <button type = 'submit' *ngIf="userForm.valid">Enviar</button>
+
+</form>

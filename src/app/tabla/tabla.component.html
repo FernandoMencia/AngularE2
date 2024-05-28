@@ -1,0 +1,24 @@
+<table>
+  <thead [ngClass]="{'cambio-estilo': estiloEncabezadoCambiado}">
+    <tr>
+      <th>Nombre</th>
+      <th>Edad</th>
+      <th>Ciudad</th>
+      <th>Profesión</th>
+      <th *ngIf="mostrarColumnas">Salario</th>
+      <th *ngIf="mostrarColumnas">Estado Civil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dato of datosPersonalizados">
+      <td>{{ dato.nombre }}</td>
+      <td>{{ dato.edad }}</td>
+      <td>{{ dato.ciudad }}</td>
+      <td>{{ dato.profesion }}</td>
+      <td *ngIf="mostrarColumnas">{{ dato.salario }}</td>
+      <td *ngIf="mostrarColumnas">{{ dato.estadoCivil }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="cambiarEstiloEncabezado()">Cambiar tabla</button>
